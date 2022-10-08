@@ -1,4 +1,4 @@
-import './css/styles.css';
+import '../css/styles.css';
 import { refs } from './refs';
 import fetchCountries from './fetchCountries';
 import createMarkup from './createMarkup';
@@ -33,6 +33,7 @@ function getInputValue(event) {
         countyCardMarkup(...data);
       })
       .catch(() => {
+        clearMarkup();
         Notify.failure('Oops, there is no country with that name');
       })
 }
